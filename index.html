@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOPTIMUS PRIME Stock Trader</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: #f5f5f5;
+            min-height: 100vh;
+        }
+
+        /* Scrolling Ticker (Feature #12) */
+        .ticker-wrap {
+            width: 100%;
+            overflow: hidden;
+            background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%);
+            padding: 12px 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .ticker {
+            display: flex;
+            animation: scroll 40s linear infinite;
+        }
+
+        .ticker-item {
+            flex-shrink: 0;
+            padding: 0 60px;
+            color: #ffd700;
+            font-size: 1.3em;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            white-space: nowrap;
+        }
+
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* Make ticker continuous by duplicating content */
+        .ticker::after {
+            content: attr(data-duplicate);
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header with GIF (Feature #14) */
+        .header {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-content {
+            flex: 1;
+        }
+
+        .header h1 {
+            color: #2d3748;
+            font-size: 2.8em;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+
+        .header .subtitle {
+            color: #718096;
+            font-size: 1.2em;
+        }
+
+        .header .date {
+            color: #4a5568;
+            font-size: 1em;
+            margin-top: 10px;
+            font-weight: 600;
+        }
+
+        .header-gif {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 4px solid #667eea;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        /* Market Health Section (Feature #8 & #9) - DISABLED */
+        .market-health {
+            display: none; /* Hidden - market breadth not working on GitHub Actions */
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+        }
+
+        .market-health h2 {
+            color: #2d3748;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .market-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .market-stat {
+            background: #f7fafc;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #48bb78;
+        }
+
+        .market-stat.warning {
+            border-left-color: #f56565;
+            background: #fff5f5;
+        }
+
+        .market-stat-label {
+            color: #718096;
+            font-size: 0.9em;
+            margin-bottom: 5px;
+        }
+
+        .market-stat-value {
+            color: #2d3748;
+            font-size: 1.8em;
+            font-weight: 700;
+        }
+
+        /* Flashing Warning (Feature #8) */
+        .warning-flash {
+            animation: flash 1s infinite;
+            font-size: 2.5em;
+            font-weight: 900;
+            text-align: center;
+            margin: 20px 0;
+            padding: 20px;
+            background: #fff5f5;
+            border: 3px solid #f56565;
+            border-radius: 12px;
+        }
+
+        @keyframes flash {
+            0%, 100% { 
+                opacity: 1; 
+                color: #c53030;
+                transform: scale(1);
+            }
+            50% { 
+                opacity: 0.5; 
+                color: #fc8181;
+                transform: scale(1.05);
+            }
+        }
+
+        .nasdaq-top10 {
+            text-align: center;
+            font-size: 1.3em;
+            padding: 15px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 8px;
+            font-weight: 700;
+            margin-top: 15px;
+        }
+
+        /* Summary Cards */
+        .summary-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .summary-card {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .summary-card .number {
+            font-size: 3em;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .summary-card .label {
+            color: #718096;
+            font-size: 0.9em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .summary-card.buy .number { color: #48bb78; }
+        .summary-card.sell .number { color: #f56565; }
+        .summary-card.hold .number { color: #ed8936; }
+
+        /* Category Headers (Feature #13) */
+        .category-section {
+            margin-bottom: 30px;
+        }
+
+        .category-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px 30px;
+            border-radius: 12px 12px 0 0;
+            font-size: 1.8em;
+            font-weight: 800;
+            margin-bottom: 0;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        .stock-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            background: white;
+            border-radius: 0 0 12px 12px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+        }
+
+        /* Stock Cards - Enhanced */
+        .stock-card {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            border: 2px solid #e2e8f0;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .stock-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .stock-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #e2e8f0;
+        }
+
+        .stock-info h3 {
+            color: #2d3748;
+            font-size: 1.5em;
+            margin-bottom: 5px;
+        }
+
+        .stock-info .ticker {
+            color: #718096;
+            font-size: 0.9em;
+            font-weight: 600;
+        }
+
+        .stock-price .price {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #2d3748;
+        }
+
+        .signal-badge {
+            display: inline-block;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-top: 8px;
+        }
+
+        .signal-badge.buy {
+            background: #48bb78;
+            color: white;
+        }
+
+        .signal-badge.sell {
+            background: #f56565;
+            color: white;
+        }
+
+        .signal-badge.hold {
+            background: #ed8936;
+            color: white;
+        }
+
+        /* Volume Alert - MOST IMPORTANT (Feature #6) */
+        .volume-alert {
+            background: #fee;
+            border: 3px solid #dc2626;
+            color: #7f1d1d;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            font-weight: 900;
+            font-size: 1.2em;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(220, 38, 38, 0.4);
+            animation: pulse 2s infinite;
+        }
+
+        .volume-alert.up {
+            background: #d1fae5;
+            border: 3px solid #10b981;
+            color: #065f46;
+            box-shadow: 0 4px 15px rgba(16, 185, 129, 0.4);
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+        }
+
+        /* Earnings Warning (Feature #10) */
+        .earnings-warning {
+            background: #fffaf0;
+            border: 2px solid #f6ad55;
+            border-radius: 8px;
+            padding: 12px;
+            margin: 10px 0;
+            font-weight: 700;
+            color: #744210;
+        }
+
+        /* Indicators Grid */
+        .indicators {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin: 15px 0;
+        }
+
+        .indicator {
+            background: #f7fafc;
+            padding: 10px;
+            border-radius: 6px;
+        }
+
+        .indicator-label {
+            color: #718096;
+            font-size: 0.8em;
+            margin-bottom: 3px;
+        }
+
+        .indicator-value {
+            color: #2d3748;
+            font-size: 1em;
+            font-weight: 600;
+        }
+
+        /* Reasons Section */
+        .reasons {
+            background: #edf2f7;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+
+        .reasons h4 {
+            color: #2d3748;
+            margin-bottom: 10px;
+            font-size: 0.95em;
+        }
+
+        .reasons ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .reasons li {
+            color: #4a5568;
+            padding: 5px 0;
+            font-size: 0.9em;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .reasons li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        .strength-bar {
+            width: 100%;
+            height: 8px;
+            background: #e2e8f0;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-top: 10px;
+        }
+
+        .strength-fill {
+            height: 100%;
+            transition: width 0.3s;
+        }
+
+        .strength-fill.buy { background: #48bb78; }
+        .strength-fill.sell { background: #f56565; }
+        .strength-fill.hold { background: #ed8936; }
+
+        .alert {
+            background: #fff5f5;
+            border: 2px solid #fc8181;
+            border-radius: 8px;
+            padding: 12px;
+            margin: 15px 0;
+            color: #c53030;
+            font-weight: 600;
+            font-size: 0.95em;
+        }
+
+        .golden-alert {
+            background: #fffff0;
+            border: 2px solid #f6e05e;
+            border-radius: 8px;
+            padding: 12px;
+            margin: 15px 0;
+            color: #744210;
+            font-weight: 600;
+            font-size: 0.95em;
+        }
+
+        /* Music Control Button (Feature #15) */
+        .music-control {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 15px 25px;
+            border-radius: 50px;
+            font-size: 1.1em;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(102, 126, 234, 0.4);
+            transition: all 0.3s;
+            z-index: 1000;
+        }
+
+        .music-control:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 30px rgba(102, 126, 234, 0.6);
+        }
+
+        .footer {
+            text-align: center;
+            color: #666;
+            margin-top: 30px;
+            padding: 20px;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 768px) {
+            .stock-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .indicators {
+                grid-template-columns: 1fr;
+            }
+
+            .header {
+                flex-direction: column;
+            }
+
+            .header-gif {
+                margin-top: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Background Music (Feature #15) -->
+    <audio id="background-music" loop>
+        <source src="Mozart-The_Marriage_of_Figaro.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Scrolling Ticker (Feature #12) -->
+    <div class="ticker-wrap">
+        <div class="ticker" id="ticker">
+            <span class="ticker-item">🎯 Preserve your capital!</span>
+            <span class="ticker-item">🤓 You're not a smarty person!</span>
+            <span class="ticker-item">🍀 You're lucky, not smart!</span>
+            <span class="ticker-item">📈 The trend is your friend...until it isn't!</span>
+            <!-- Duplicate for seamless scroll -->
+            <span class="ticker-item">🎯 Preserve your capital!</span>
+            <span class="ticker-item">🤓 You're not a smarty person!</span>
+            <span class="ticker-item">🍀 You're lucky, not smart!</span>
+            <span class="ticker-item">📈 The trend is your friend...until it isn't!</span>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Header with GIF (Feature #14) -->
+        <div class="header">
+            <div class="header-content">
+                <h1>BOPTIMUS PRIME STOCK TRADER</h1>
+                <div class="subtitle">Advanced Technical Analysis & Trading Signals</div>
+                <div class="date" id="current-date"></div>
+            </div>
+            <img src="boppa.gif" alt="Boppa" class="header-gif">
+        </div>
+
+        <!-- Market Health Section (Feature #8 & #9) -->
+        <div class="market-health">
+            <h2>📊 Market Health Monitor</h2>
+            <div class="market-stats" id="market-stats">
+                <!-- Populated by JavaScript -->
+            </div>
+            <div id="market-warning"></div>
+            <div class="nasdaq-top10" id="nasdaq-top10">
+                <!-- Populated by JavaScript -->
+            </div>
+        </div>
+
+        <!-- Summary Cards -->
+        <div class="summary-cards">
+            <div class="summary-card buy">
+                <div class="label">Buy Signals</div>
+                <div class="number" id="buy-count">0</div>
+            </div>
+            <div class="summary-card hold">
+                <div class="label">Hold Signals</div>
+                <div class="number" id="hold-count">0</div>
+            </div>
+            <div class="summary-card sell">
+                <div class="label">Sell Signals</div>
+                <div class="number" id="sell-count">0</div>
+            </div>
+        </div>
+
+        <!-- Stock Categories (Feature #13) -->
+        <div id="stock-categories"></div>
+
+        <div class="footer">
+            ⚠️ For educational purposes only. Not financial advice.<br>
+            All indicators updated automatically via Yahoo Finance data.
+        </div>
+    </div>
+
+    <!-- Music Control Button (Feature #15) -->
+    <button class="music-control" id="music-btn" onclick="toggleMusic()">
+        🎵 Play Music
+    </button>
+
+    <script>
+        let musicPlaying = false;
+
+        function toggleMusic() {
+            const audio = document.getElementById('background-music');
+            const btn = document.getElementById('music-btn');
+            
+            if (musicPlaying) {
+                audio.pause();
+                btn.innerHTML = '🎵 Play Music';
+                musicPlaying = false;
+            } else {
+                audio.play();
+                btn.innerHTML = '🔇 Mute Music';
+                musicPlaying = true;
+            }
+        }
+
+        // Auto-play music (with user interaction requirement)
+        document.addEventListener('click', function() {
+            if (!musicPlaying) {
+                const audio = document.getElementById('background-music');
+                audio.play().then(() => {
+                    musicPlaying = true;
+                    document.getElementById('music-btn').innerHTML = '🔇 Mute Music';
+                }).catch(() => {
+                    // Auto-play blocked, user needs to click button
+                });
+            }
+        }, { once: true });
+
+        async function loadData() {
+            try {
+                const response = await fetch('dashboard_data.json?t=' + new Date().getTime());
+                if (!response.ok) {
+                    throw new Error('Could not load dashboard data');
+                }
+                const data = await response.json();
+                displayData(data);
+            } catch (error) {
+                console.error('Error loading data:', error);
+                document.getElementById('stock-categories').innerHTML = `
+                    <div style="text-align: center; padding: 40px; background: white; border-radius: 12px;">
+                        <h2 style="color: #e53e3e;">⚠️ No Data Available</h2>
+                        <p style="color: #718096; margin: 20px 0;">
+                            Please run the Python script first:
+                        </p>
+                        <pre style="background: #2d3748; color: #48bb78; padding: 15px; border-radius: 8px; display: inline-block;">python generate_live_data.py</pre>
+                    </div>
+                `;
+            }
+        }
+
+        function displayData(data) {
+            // Update date
+            document.getElementById('current-date').textContent = `Last Updated: ${data.generated_at}`;
+
+            // Update summary
+            document.getElementById('buy-count').textContent = data.market_summary.total_buy_signals;
+            document.getElementById('hold-count').textContent = data.market_summary.total_hold_signals;
+            document.getElementById('sell-count').textContent = data.market_summary.total_sell_signals;
+
+            // Display market health (Feature #8)
+            displayMarketHealth(data.market_breadth, data.nasdaq_top10);
+
+            // Display stocks by category (Feature #13)
+            displayStocksByCategory(data);
+        }
+
+        function displayMarketHealth(breadth, nasdaq) {
+            const statsDiv = document.getElementById('market-stats');
+            const warningDiv = document.getElementById('market-warning');
+            const nasdaqDiv = document.getElementById('nasdaq-top10');
+
+            // Check if data is available (not N/A)
+            const sp500Available = breadth.sp500_pct_above_ma50 !== 'N/A';
+            const nasdaqAvailable = breadth.nasdaq_pct_above_ma50 !== 'N/A';
+
+            // Format S&P 500 display
+            let sp500ValueDisplay, sp500Icon, sp500Class;
+            if (sp500Available) {
+                sp500ValueDisplay = `${breadth.sp500_pct_above_ma50}%`;
+                sp500Icon = breadth.sp500_healthy ? '✅' : '⚠️';
+                sp500Class = breadth.sp500_healthy ? '' : 'warning';
+            } else {
+                sp500ValueDisplay = 'N/A';
+                sp500Icon = '❓';
+                sp500Class = 'warning';
+            }
+
+            // Format NASDAQ display
+            let nasdaqValueDisplay, nasdaqIcon, nasdaqClass;
+            if (nasdaqAvailable) {
+                nasdaqValueDisplay = `${breadth.nasdaq_pct_above_ma50}%`;
+                nasdaqIcon = breadth.nasdaq_healthy ? '✅' : '⚠️';
+                nasdaqClass = breadth.nasdaq_healthy ? '' : 'warning';
+            } else {
+                nasdaqValueDisplay = 'N/A';
+                nasdaqIcon = '❓';
+                nasdaqClass = 'warning';
+            }
+
+            // Market breadth stats with exact counts
+            statsDiv.innerHTML = `
+                <div class="market-stat ${sp500Class}">
+                    <div class="market-stat-label">S&P 500 Above 50-Day MA</div>
+                    <div class="market-stat-value">${sp500ValueDisplay} ${sp500Icon}</div>
+                    <div style="font-size: 0.85em; color: #718096; margin-top: 5px;">
+                        ${sp500Available ? `${breadth.sp500_above} of ${breadth.sp500_checked} stocks checked` : 'Data unavailable - install Selenium'}
+                    </div>
+                </div>
+                <div class="market-stat ${nasdaqClass}">
+                    <div class="market-stat-label">NASDAQ Above 50-Day MA</div>
+                    <div class="market-stat-value">${nasdaqValueDisplay} ${nasdaqIcon}</div>
+                    <div style="font-size: 0.85em; color: #718096; margin-top: 5px;">
+                        ${nasdaqAvailable ? `${breadth.nasdaq_above} of ${breadth.nasdaq_checked} stocks checked` : 'Data unavailable - install Selenium'}
+                    </div>
+                </div>
+            `;
+
+            // Warning flash if unhealthy or unavailable
+            if (breadth.market_healthy === false) {
+                warningDiv.innerHTML = `
+                    <div class="warning-flash">
+                        ⚠️ LOOKY LOOK OUT! ⚠️
+                    </div>
+                `;
+            } else if (breadth.market_healthy === null) {
+                warningDiv.innerHTML = `
+                    <div style="text-align: center; padding: 15px; background: #fff5e6; border: 2px solid #f59e0b; border-radius: 8px; margin: 20px 0;">
+                        <div style="font-size: 1.2em; font-weight: 700; color: #92400e;">
+                            ⚠️ Market Breadth Data Unavailable
+                        </div>
+                        <div style="font-size: 0.9em; color: #92400e; margin-top: 5px;">
+                            Install Selenium + Chrome for accurate Streetstats data
+                        </div>
+                    </div>
+                `;
+            } else {
+                warningDiv.innerHTML = '';
+            }
+
+            // NASDAQ Top 10 performance (Feature #9)
+            const returnClass = nasdaq.combined_1week_return >= 0 ? 'positive' : 'negative';
+            const returnSign = nasdaq.combined_1week_return >= 0 ? '+' : '';
+            nasdaqDiv.innerHTML = `
+                📈 NASDAQ Top 10 (1-Week Combined): ${returnSign}${nasdaq.combined_1week_return}%
+            `;
+        }
+
+        function displayStocksByCategory(data) {
+            const container = document.getElementById('stock-categories');
+            container.innerHTML = '';
+
+            // Get stock groups
+            const stockGroups = data.stock_groups || {
+                'CHIP STOCKS': ['NVDA', 'TSM', 'VRT', 'CRDO', 'ALAB', 'AVGO'],
+                'HIGH FLYERS': ['BRK-B', 'GLD', 'AAPL', 'AMZN', 'GOOGL', 'META', 'TSLA', 'MSFT'],
+                'URANIUM STOCKS': ['CCJ', 'OKLO'],
+                'RAILROADS': ['CNI', 'CP']
+            };
+
+            // Display each category
+            for (const [category, tickers] of Object.entries(stockGroups)) {
+                const categorySection = document.createElement('div');
+                categorySection.className = 'category-section';
+
+                const categoryHeader = document.createElement('div');
+                categoryHeader.className = 'category-header';
+                categoryHeader.textContent = `📊 ${category}`;
+
+                const stockGrid = document.createElement('div');
+                stockGrid.className = 'stock-grid';
+
+                // Add stock cards for this category
+                for (const ticker of tickers) {
+                    if (data.stocks[ticker] && !data.stocks[ticker].error) {
+                        const card = createStockCard(ticker, data.stocks[ticker]);
+                        stockGrid.appendChild(card);
+                    }
+                }
+
+                categorySection.appendChild(categoryHeader);
+                categorySection.appendChild(stockGrid);
+                container.appendChild(categorySection);
+            }
+        }
+
+        function createStockCard(ticker, stock) {
+            const card = document.createElement('div');
+            card.className = 'stock-card';
+            const signalClass = stock.signal.toLowerCase();
+
+            // Feature #6: Volume signal FIRST and MOST PROMINENT
+            let volumeAlert = '';
+            if (stock.father_rules.abnormal_volume_up) {
+                volumeAlert = `
+                    <div class="volume-alert up">
+                        🔥 ABNORMAL BUYING VOLUME (${stock.father_rules.volume_ratio.toFixed(1)}x average)
+                        <br>Price UP ${Math.abs(stock.father_rules.price_change_pct).toFixed(1)}%
+                    </div>
+                `;
+            } else if (stock.father_rules.abnormal_volume_down) {
+                volumeAlert = `
+                    <div class="volume-alert">
+                        ⚠️ ABNORMAL SELLING VOLUME (${stock.father_rules.volume_ratio.toFixed(1)}x average)
+                        <br>Price DOWN ${Math.abs(stock.father_rules.price_change_pct).toFixed(1)}%
+                    </div>
+                `;
+            }
+
+            // Feature #10: Bold earnings if within 2 weeks
+            let earningsInfo = '';
+            if (stock.earnings_date) {
+                const earningsStyle = stock.earnings_soon ? 'font-weight: 900; color: #c53030;' : '';
+                earningsInfo = `
+                    <div class="earnings-warning" style="${earningsStyle}">
+                        📅 Next Earnings: ${stock.earnings_date} ${stock.earnings_soon ? '(⚠️ WITHIN 2 WEEKS!)' : ''}
+                        <br><small>Pre-earnings volatility: ${stock.pre_earnings_volatility}% | ${stock.pre_earnings_pattern}</small>
+                    </div>
+                `;
+            }
+
+            card.innerHTML = `
+                <div class="stock-header">
+                    <div class="stock-info">
+                        <h3>${stock.name}</h3>
+                        <div class="ticker">${ticker}</div>
+                    </div>
+                    <div class="stock-price">
+                        <div class="price">$${stock.current_price.toFixed(2)}</div>
+                        <span class="signal-badge ${signalClass}">${stock.signal}</span>
+                    </div>
+                </div>
+
+                ${volumeAlert}
+
+                ${stock.death_cross ? '<div class="alert">⚠️ Death Cross Detected!</div>' : ''}
+                ${stock.golden_cross ? '<div class="golden-alert">✨ Golden Cross Detected!</div>' : ''}
+                ${stock.father_rules.ma_alignment_bullish ? '<div class="golden-alert">✨ BULLISH MA ALIGNMENT: 10 > 21 > 50</div>' : ''}
+
+                <div class="strength-bar">
+                    <div class="strength-fill ${signalClass}" style="width: ${stock.signal_strength}%"></div>
+                </div>
+                <div style="text-align: right; margin-top: 5px; color: #718096; font-size: 0.85em;">
+                    Signal Strength: ${stock.signal_strength}%
+                </div>
+
+                ${earningsInfo}
+
+                <div class="indicators">
+                    <div class="indicator">
+                        <div class="indicator-label">10-Day MA</div>
+                        <div class="indicator-value">$${stock.indicators.MA_10.toFixed(2)}</div>
+                    </div>
+                    <div class="indicator">
+                        <div class="indicator-label">21-Day EMA</div>
+                        <div class="indicator-value">$${stock.indicators.MA_21_EMA.toFixed(2)}</div>
+                    </div>
+                    <div class="indicator">
+                        <div class="indicator-label">50-Day MA</div>
+                        <div class="indicator-value">$${stock.indicators.MA_50.toFixed(2)}</div>
+                    </div>
+                    <div class="indicator">
+                        <div class="indicator-label">100-Day MA</div>
+                        <div class="indicator-value">$${stock.indicators.MA_100.toFixed(2)}</div>
+                    </div>
+                    <div class="indicator">
+                        <div class="indicator-label">RSI</div>
+                        <div class="indicator-value">${stock.indicators.RSI.toFixed(1)}</div>
+                    </div>
+                    <div class="indicator">
+                        <div class="indicator-label">Williams %R</div>
+                        <div class="indicator-value">${stock.indicators.Williams_R.toFixed(1)}</div>
+                    </div>
+                </div>
+
+                <div class="reasons">
+                    <h4>📋 Signal Analysis:</h4>
+                    <ul>
+                        ${stock.reasons.map(reason => `<li>${reason}</li>`).join('')}
+                    </ul>
+                </div>
+            `;
+
+            return card;
+        }
+
+        // Load data on page load
+        loadData();
+    </script>
+</body>
+</html>
