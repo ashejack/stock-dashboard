@@ -153,7 +153,16 @@ class StockAnalyzer:
         return df
     
     def generate_signals(self):
-        """Generate buy/sell/hold signals based on technical indicators"""
+        """Generate buy/sell/hold signals based on technical indicators
+        
+        BUY RULES:
+        - Primary: Price > 10d MA > 21d MA > 50d MA (Perfect alignment)
+        - Secondary: Williams %R oversold (<-80) OR RSI oversold (<30) + price above 50d MA
+        
+        SELL RULES:
+        - Primary: Price below 10d MA for 2+ consecutive days
+        - Secondary: Death Cross (50d crossed below 100d)
+        """
         if self.data is None or 'RSI' not in self.data.columns:
             self.calculate_indicators()
         
@@ -166,74 +175,40 @@ class StockAnalyzer:
                 continue
             
             row = df.iloc[idx]
-            score = 0  # Positive = bullish, Negative = bearish
-            reasons = []
+            signal = 'HOLD'  # Default
             
-            # 1. Death Cross/Golden Cross (STRONG signal)
-            if row['Death_Cross']:
-                score -= 3
-                reasons.append('Death Cross (50-day crossed below 100-day)')
-            elif row['Golden_Cross']:
-                score += 3
-                reasons.append('Golden Cross (50-day crossed above 100-day)')
+            # === SELL SIGNALS (check first) ===
             
-            # 2. Price vs Moving Averages
-            if row['Close'] > row['MA_20'] and row['Close'] > row['MA_50']:
-                score += 1
-                reasons.append('Price above 20-day and 50-day MA')
-            elif row['Close'] < row['MA_20'] and row['Close'] < row['MA_50']:
-                score -= 1
-                reasons.append('Price below 20-day and 50-day MA')
-            
-            # 3. RSI
-            if row['RSI'] < 30:  # Oversold
-                score += 2
-                reasons.append(f'RSI oversold ({row["RSI"]:.1f})')
-            elif row['RSI'] > 70:  # Overbought
-                score -= 2
-                reasons.append(f'RSI overbought ({row["RSI"]:.1f})')
-            
-            # 4. Williams %R
-            if row['Williams_R'] < -80:  # Oversold
-                score += 1
-                reasons.append(f'Williams %R oversold ({row["Williams_R"]:.1f})')
-            elif row['Williams_R'] > -20:  # Overbought
-                score -= 1
-                reasons.append(f'Williams %R overbought ({row["Williams_R"]:.1f})')
-            
-            # 5. Bollinger Bands
-            if row['Close'] < row['BB_Lower']:
-                score += 1
-                reasons.append('Price below lower Bollinger Band')
-            elif row['Close'] > row['BB_Upper']:
-                score -= 1
-                reasons.append('Price above upper Bollinger Band')
-            
-            # 6. MACD
-            if row['MACD'] > row['MACD_Signal'] and row['MACD_Hist'] > 0:
-                score += 1
-                reasons.append('MACD bullish')
-            elif row['MACD'] < row['MACD_Signal'] and row['MACD_Hist'] < 0:
-                score -= 1
-                reasons.append('MACD bearish')
-            
-            # 7. Volume
-            if row['Volume_Ratio'] > 1.5:
-                # High volume - amplifies the signal
-                if score > 0:
-                    score += 1
-                    reasons.append('High volume supports bullish signal')
-                elif score < 0:
-                    score -= 1
-                    reasons.append('High volume supports bearish signal')
-            
-            # Generate final signal
-            if score >= 3:
-                signal = 'BUY'
-            elif score <= -3:
+            # SELL Rule 1: Price below 10d MA for 2+ days
+            if row['Days_Below_MA10'] >= 2:
                 signal = 'SELL'
-            else:
-                signal = 'HOLD'
+            
+            # SELL Rule 2: Death Cross
+            elif row['Death_Cross']:
+                signal = 'SELL'
+            
+            # === BUY SIGNALS ===
+            
+            # BUY Rule 1: Perfect MA alignment (strongest signal)
+            # Price > 10d MA > 21d MA > 50d MA
+            elif row['MA_Alignment_Bullish']:
+                signal = 'BUY'
+            
+            # BUY Rule 2: Oversold indicators + above 50d MA
+            elif row['Close'] > row['MA_50']:
+                # Williams %R oversold (< -80) = good entry point
+                if row['Williams_R'] < -80:
+                    signal = 'BUY'
+                # RSI oversold (< 30) = good entry point
+                elif row['RSI'] < 30:
+                    signal = 'BUY'
+                # Both indicators moderately oversold
+                elif row['Williams_R'] < -70 and row['RSI'] < 40:
+                    signal = 'BUY'
+            
+            # BUY Rule 3: Golden Cross (strong long-term signal)
+            elif row['Golden_Cross']:
+                signal = 'BUY'
             
             signals.append(signal)
         
