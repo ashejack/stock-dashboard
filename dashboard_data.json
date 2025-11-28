@@ -1,6 +1,6 @@
 {
-  "generated_at": "2025-11-27 13:31:57",
-  "date": "2025-11-27",
+  "generated_at": "2025-11-28 13:30:44",
+  "date": "2025-11-28",
   "market_breadth": {
     "sp500_pct_above_ma50": "N/A",
     "nasdaq_pct_above_ma50": "N/A",
@@ -47,7 +47,7 @@
         "MACD_Signal": -0.7480474909591499,
         "BB_Upper": 207.42276611035433,
         "BB_Lower": 172.58323822314176,
-        "Volume_Ratio": 0.833245239186072
+        "Volume_Ratio": 0.8361694070340844
       },
       "father_rules": {
         "below_ma10": true,
@@ -57,7 +57,7 @@
         "ma_alignment_bullish": false,
         "abnormal_volume_up": false,
         "abnormal_volume_down": false,
-        "volume_ratio": 0.833245239186072,
+        "volume_ratio": 0.8361694070340844,
         "intraday_momentum_up": false,
         "price_change_pct": 1.3721668440651813
       },
@@ -92,7 +92,7 @@
         "MACD_Signal": -1.4072695391644305,
         "BB_Upper": 305.2042456193945,
         "BB_Lower": 271.81075377025394,
-        "Volume_Ratio": 0.9446872269663548
+        "Volume_Ratio": 0.9452546981176589
       },
       "father_rules": {
         "below_ma10": false,
@@ -102,7 +102,7 @@
         "ma_alignment_bullish": false,
         "abnormal_volume_up": false,
         "abnormal_volume_down": false,
-        "volume_ratio": 0.9446872269663548,
+        "volume_ratio": 0.9452546981176589,
         "intraday_momentum_up": true,
         "price_change_pct": 1.8547136838345413
       },
@@ -123,16 +123,16 @@
       "indicators": {
         "MA_10": 166.62157287597657,
         "MA_20": 175.90773391723633,
-        "MA_21_EMA": 172.06864884911488,
+        "MA_21_EMA": 172.0686488520841,
         "MA_50": 169.63165130615235,
-        "MA_100": 150.9323710632324,
-        "RSI": 50.05655962308232,
+        "MA_100": 150.93237075805663,
+        "RSI": 50.056559623285985,
         "Williams_R": -45.68749070609672,
-        "MACD": -1.893413518765641,
-        "MACD_Signal": -0.4887486626812251,
-        "BB_Upper": 198.14692931062692,
-        "BB_Lower": 153.66853852384574,
-        "Volume_Ratio": 0.6992545787691907
+        "MACD": -1.8934135211285366,
+        "MACD_Signal": -0.4887486657178237,
+        "BB_Upper": 198.14692931062632,
+        "BB_Lower": 153.66853852384634,
+        "Volume_Ratio": 0.7000244652221549
       },
       "father_rules": {
         "below_ma10": false,
@@ -142,7 +142,7 @@
         "ma_alignment_bullish": false,
         "abnormal_volume_up": false,
         "abnormal_volume_down": false,
-        "volume_ratio": 0.6992545787691907,
+        "volume_ratio": 0.7000244652221549,
         "intraday_momentum_up": false,
         "price_change_pct": 1.4448291811167913
       },
@@ -174,7 +174,7 @@
         "MACD_Signal": -1.1913145979918742,
         "BB_Upper": 187.11163846520313,
         "BB_Lower": 126.92536104651562,
-        "Volume_Ratio": 0.8688312873599796
+        "Volume_Ratio": 0.869681095932895
       },
       "father_rules": {
         "below_ma10": false,
@@ -184,7 +184,7 @@
         "ma_alignment_bullish": false,
         "abnormal_volume_up": false,
         "abnormal_volume_down": false,
-        "volume_ratio": 0.8688312873599796,
+        "volume_ratio": 0.869681095932895,
         "intraday_momentum_up": true,
         "price_change_pct": 6.375666297848248
       },
@@ -214,7 +214,7 @@
         "MACD_Signal": -9.88739587683713,
         "BB_Upper": 193.3332546343093,
         "BB_Lower": 124.2677448163743,
-        "Volume_Ratio": 0.7914396424339742
+        "Volume_Ratio": 0.792054749400721
       },
       "father_rules": {
         "below_ma10": false,
@@ -224,7 +224,7 @@
         "ma_alignment_bullish": false,
         "abnormal_volume_up": false,
         "abnormal_volume_down": false,
-        "volume_ratio": 0.7914396424339742,
+        "volume_ratio": 0.792054749400721,
         "intraday_momentum_up": true,
         "price_change_pct": 6.5202393431406325
       },
@@ -248,16 +248,16 @@
       "indicators": {
         "MA_10": 356.7590026855469,
         "MA_20": 357.8875015258789,
-        "MA_21_EMA": 359.0944775835069,
+        "MA_21_EMA": 359.0944775835417,
         "MA_50": 349.9317864990234,
         "MA_100": 327.1307827758789,
-        "RSI": 66.88660516062468,
+        "RSI": 66.88660516018086,
         "Williams_R": -3.2481116682224984,
-        "MACD": 6.531398136378243,
-        "MACD_Signal": 2.4137264527142315,
-        "BB_Upper": 390.0570746215611,
-        "BB_Lower": 325.7179284301967,
-        "Volume_Ratio": 1.2485650148720104
+        "MACD": 6.531398136080213,
+        "MACD_Signal": 2.413726452275996,
+        "BB_Upper": 390.05707462155806,
+        "BB_Lower": 325.7179284301998,
+        "Volume_Ratio": 1.2497492813821853
       },
       "father_rules": {
         "below_ma10": false,
@@ -267,7 +267,7 @@
         "ma_alignment_bullish": false,
         "abnormal_volume_up": false,
         "abnormal_volume_down": false,
-        "volume_ratio": 1.2485650148720104,
+        "volume_ratio": 1.2497492813821853,
         "intraday_momentum_up": true,
         "price_change_pct": 3.256891303191667
       },
@@ -297,7 +297,7 @@
         "MACD_Signal": 3.4758594865203802,
         "BB_Upper": 520.4598152143615,
         "BB_Lower": 475.59418564013066,
-        "Volume_Ratio": 0.6242512052735484
+        "Volume_Ratio": 0.6247272844350266
       },
       "father_rules": {
         "below_ma10": false,
@@ -307,7 +307,7 @@
         "ma_alignment_bullish": true,
         "abnormal_volume_up": false,
         "abnormal_volume_down": false,
-        "volume_ratio": 0.6242512052735484,
+        "volume_ratio": 0.6247272844350266,
         "intraday_momentum_up": true,
         "price_change_pct": 0.5230358896122667
       },
@@ -339,7 +339,7 @@
         "MACD_Signal": 3.106886907502536,
         "BB_Upper": 387.38306870417415,
         "BB_Lower": 361.2959290985602,
-        "Volume_Ratio": 0.8045767280938224
+        "Volume_Ratio": 0.8056206869631045
       },
       "father_rules": {
         "below_ma10": false,
@@ -349,7 +349,7 @@
         "ma_alignment_bullish": true,
         "abnormal_volume_up": false,
         "abnormal_volume_down": false,
-        "volume_ratio": 0.8045767280938224,
+        "volume_ratio": 0.8056206869631045,
         "intraday_momentum_up": true,
         "price_change_pct": 0.7998338908444147
       },
@@ -372,16 +372,16 @@
       "indicators": {
         "MA_10": 271.7,
         "MA_20": 271.1280151367188,
-        "MA_21_EMA": 269.798789705967,
+        "MA_21_EMA": 269.7987897079358,
         "MA_50": 261.6349087524414,
-        "MA_100": 242.02069580078125,
-        "RSI": 66.95383274818164,
+        "MA_100": 242.02069610595703,
+        "RSI": 66.95383265416066,
         "Williams_R": -18.791617188734836,
-        "MACD": 3.9733747791016754,
-        "MACD_Signal": 4.006597124047588,
-        "BB_Upper": 277.73361830625254,
-        "BB_Lower": 264.522411967185,
-        "Volume_Ratio": 0.6593845512642401
+        "MACD": 3.973374772509942,
+        "MACD_Signal": 4.006597114380599,
+        "BB_Upper": 277.7336183062487,
+        "BB_Lower": 264.5224119671889,
+        "Volume_Ratio": 0.6597242298491104
       },
       "father_rules": {
         "below_ma10": false,
@@ -391,7 +391,7 @@
         "ma_alignment_bullish": true,
         "abnormal_volume_up": false,
         "abnormal_volume_down": false,
-        "volume_ratio": 0.6593845512642401,
+        "volume_ratio": 0.6597242298491104,
         "intraday_momentum_up": true,
         "price_change_pct": 0.20940411225383038
       },
@@ -423,7 +423,7 @@
         "MACD_Signal": 0.5044523249746591,
         "BB_Upper": 259.54587572653986,
         "BB_Lower": 212.76112500588204,
-        "Volume_Ratio": 0.6681444439026565
+        "Volume_Ratio": 0.6691945638968786
       },
       "father_rules": {
         "below_ma10": false,
@@ -433,7 +433,7 @@
         "ma_alignment_bullish": false,
         "abnormal_volume_up": false,
         "abnormal_volume_down": false,
-        "volume_ratio": 0.6681444439026565,
+        "volume_ratio": 0.6691945638968786,
         "intraday_momentum_up": false,
         "price_change_pct": -0.22205534501759105
       },
@@ -456,16 +456,16 @@
       "indicators": {
         "MA_10": 296.81700134277344,
         "MA_20": 290.405500793457,
-        "MA_21_EMA": 290.2752842696162,
+        "MA_21_EMA": 290.2752842696229,
         "MA_50": 266.5784002685547,
         "MA_100": 236.04370483398438,
-        "RSI": 73.43214748742821,
+        "RSI": 73.43214748564944,
         "Williams_R": -15.27606791883465,
-        "MACD": 13.882823703482018,
-        "MACD_Signal": 11.025122597411068,
-        "BB_Upper": 318.85780263141214,
-        "BB_Lower": 261.9531989555019,
-        "Volume_Ratio": 1.0874516733964366
+        "MACD": 13.88282370343984,
+        "MACD_Signal": 11.025122597349068,
+        "BB_Upper": 318.85780263141555,
+        "BB_Lower": 261.95319895549846,
+        "Volume_Ratio": 1.0891075675352522
       },
       "father_rules": {
         "below_ma10": false,
@@ -475,7 +475,7 @@
         "ma_alignment_bullish": true,
         "abnormal_volume_up": false,
         "abnormal_volume_down": false,
-        "volume_ratio": 1.0874516733964366,
+        "volume_ratio": 1.0891075675352522,
         "intraday_momentum_up": false,
         "price_change_pct": -1.0790224486865174
       },
@@ -499,16 +499,16 @@
       "indicators": {
         "MA_10": 607.5650024414062,
         "MA_20": 619.9975036621094,
-        "MA_21_EMA": 633.1680265661852,
+        "MA_21_EMA": 633.1680265662797,
         "MA_50": 688.9111755371093,
         "MA_100": 716.5347546386719,
         "RSI": 46.22953962601886,
         "Williams_R": -8.317284570744585,
-        "MACD": -22.61209021516015,
-        "MACD_Signal": -28.257458429717968,
-        "BB_Upper": 660.8439362961783,
-        "BB_Lower": 579.1510710280404,
-        "Volume_Ratio": 0.5515763735381651
+        "MACD": -22.61209021588843,
+        "MACD_Signal": -28.25745843078873,
+        "BB_Upper": 660.8439362961652,
+        "BB_Lower": 579.1510710280535,
+        "Volume_Ratio": 0.5524028133154884
       },
       "father_rules": {
         "below_ma10": false,
@@ -518,7 +518,7 @@
         "ma_alignment_bullish": false,
         "abnormal_volume_up": false,
         "abnormal_volume_down": false,
-        "volume_ratio": 0.5515763735381651,
+        "volume_ratio": 0.5524028133154884,
         "intraday_momentum_up": false,
         "price_change_pct": -0.41023316961869005
       },
@@ -550,7 +550,7 @@
         "MACD_Signal": -5.6713488196802375,
         "BB_Upper": 473.09493752735506,
         "BB_Lower": 380.18706320506686,
-        "Volume_Ratio": 0.7244145347543742
+        "Volume_Ratio": 0.726218830767428
       },
       "father_rules": {
         "below_ma10": false,
@@ -560,7 +560,7 @@
         "ma_alignment_bullish": false,
         "abnormal_volume_up": false,
         "abnormal_volume_down": false,
-        "volume_ratio": 0.7244145347543742,
+        "volume_ratio": 0.726218830767428,
         "intraday_momentum_up": true,
         "price_change_pct": 1.7119677587676296
       },
@@ -592,7 +592,7 @@
         "MACD_Signal": -7.304342957344181,
         "BB_Upper": 529.9421928153861,
         "BB_Lower": 467.71134112016085,
-        "Volume_Ratio": 0.9515656012086382
+        "Volume_Ratio": 0.9519711695565921
       },
       "father_rules": {
         "below_ma10": true,
@@ -602,7 +602,7 @@
         "ma_alignment_bullish": false,
         "abnormal_volume_up": false,
         "abnormal_volume_down": false,
-        "volume_ratio": 0.9515656012086382,
+        "volume_ratio": 0.9519711695565921,
         "intraday_momentum_up": false,
         "price_change_pct": 1.784106572434263
       },
@@ -637,7 +637,7 @@
         "MACD_Signal": -1.0319491808749295,
         "BB_Upper": 104.61659757252984,
         "BB_Lower": 75.9864015424604,
-        "Volume_Ratio": 0.580785622654296
+        "Volume_Ratio": 0.5812487268788784
       },
       "father_rules": {
         "below_ma10": false,
@@ -647,7 +647,7 @@
         "ma_alignment_bullish": false,
         "abnormal_volume_up": false,
         "abnormal_volume_down": false,
-        "volume_ratio": 0.580785622654296,
+        "volume_ratio": 0.5812487268788784,
         "intraday_momentum_up": false,
         "price_change_pct": 1.6714357297959337
       },
@@ -677,7 +677,7 @@
         "MACD_Signal": -8.983104439700648,
         "BB_Upper": 136.05585546023934,
         "BB_Lower": 75.03114481441887,
-        "Volume_Ratio": 0.5556124629807554
+        "Volume_Ratio": 0.5566724234551981
       },
       "father_rules": {
         "below_ma10": true,
@@ -687,7 +687,7 @@
         "ma_alignment_bullish": false,
         "abnormal_volume_up": false,
         "abnormal_volume_down": false,
-        "volume_ratio": 0.5556124629807554,
+        "volume_ratio": 0.5566724234551981,
         "intraday_momentum_up": true,
         "price_change_pct": 3.4394365082153655
       },
