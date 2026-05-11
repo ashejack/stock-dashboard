@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-05-08 14:50:27",
-  "date": "2026-05-08",
+  "generated_at": "2026-05-11 15:55:05",
+  "date": "2026-05-11",
   "market_breadth": {
     "sp500_pct_above_ma50": "N/A",
     "nasdaq_pct_above_ma50": "N/A",
@@ -14,7 +14,7 @@
     "source": "unavailable"
   },
   "nasdaq_top10": {
-    "combined_1week_return": 2.42,
+    "combined_1week_return": 2.64,
     "tickers": [
       "AAPL",
       "MSFT",
@@ -32,22 +32,22 @@
     "NVDA": {
       "name": "NVIDIA",
       "category": "CHIP STOCKS",
-      "current_price": 215.72000122070312,
+      "current_price": 221.9499969482422,
       "signal": "BUY",
       "signal_strength": 60,
       "indicators": {
-        "MA_10": 206.70800018310547,
-        "MA_20": 203.2074996948242,
-        "MA_21_EMA": 201.229015198547,
-        "MA_50": 188.6598287963867,
-        "MA_100": 187.1263919067383,
-        "RSI": 66.1729052566682,
-        "Williams_R": -9.019956857192012,
-        "MACD": 5.90548308963497,
-        "MACD_Signal": 5.669787499534337,
-        "BB_Upper": 217.71177264855618,
-        "BB_Lower": 188.70322674109224,
-        "Volume_Ratio": 0.3446377127701412
+        "MA_10": 207.18999938964845,
+        "MA_20": 204.8134994506836,
+        "MA_21_EMA": 203.06972186390843,
+        "MA_50": 189.54482025146484,
+        "MA_100": 187.5778872680664,
+        "RSI": 69.82800607123568,
+        "Williams_R": -1.234107036437229,
+        "MACD": 6.769966215814094,
+        "MACD_Signal": 5.883722578039448,
+        "BB_Upper": 219.98334082925464,
+        "BB_Lower": 189.64365807211254,
+        "Volume_Ratio": 0.5639785379885734
       },
       "father_rules": {
         "below_ma10": false,
@@ -57,9 +57,9 @@
         "ma_alignment_bullish": true,
         "abnormal_volume_up": false,
         "abnormal_volume_down": false,
-        "volume_ratio": 0.3446377127701412,
+        "volume_ratio": 0.5639785379885734,
         "intraday_momentum_up": true,
-        "price_change_pct": 1.9952724447768855
+        "price_change_pct": 3.136617144852205
       },
       "death_cross": false,
       "golden_cross": false,
@@ -74,22 +74,22 @@
     "TSM": {
       "name": "Taiwan Semiconductor",
       "category": "CHIP STOCKS",
-      "current_price": 414.29998779296875,
+      "current_price": 406.1499938964844,
       "signal": "BUY",
       "signal_strength": 60,
       "indicators": {
-        "MA_10": 402.88499755859374,
-        "MA_20": 389.70699920654295,
-        "MA_21_EMA": 389.9916201755925,
-        "MA_50": 363.09686157226565,
-        "MA_100": 347.18370361328124,
-        "RSI": 65.61728724282383,
-        "Williams_R": -10.384424641784108,
-        "MACD": 14.721258535432128,
-        "MACD_Signal": 13.016724299720362,
-        "BB_Upper": 424.1327125805648,
-        "BB_Lower": 355.28128583252106,
-        "Volume_Ratio": 0.3125497337916169
+        "MA_10": 402.7399963378906,
+        "MA_20": 391.4049987792969,
+        "MA_21_EMA": 391.2440046795383,
+        "MA_50": 363.6969122314453,
+        "MA_100": 348.3496887207031,
+        "RSI": 60.56451694715794,
+        "Williams_R": -28.059177904673344,
+        "MACD": 13.943387710855859,
+        "MACD_Signal": 13.168987976770993,
+        "BB_Upper": 424.8543263846408,
+        "BB_Lower": 357.95567117395296,
+        "Volume_Ratio": 0.5771762105045831
       },
       "father_rules": {
         "below_ma10": false,
@@ -99,9 +99,9 @@
         "ma_alignment_bullish": true,
         "abnormal_volume_up": false,
         "abnormal_volume_down": false,
-        "volume_ratio": 0.3125497337916169,
+        "volume_ratio": 0.5771762105045831,
         "intraday_momentum_up": false,
-        "price_change_pct": 0.03621728810694336
+        "price_change_pct": -1.3432760585117887
       },
       "death_cross": false,
       "golden_cross": false,
@@ -116,22 +116,22 @@
     "VRT": {
       "name": "Vertiv",
       "category": "CHIP STOCKS",
-      "current_price": 343.55999755859375,
+      "current_price": 367.5050048828125,
       "signal": "BUY",
       "signal_strength": 60,
       "indicators": {
-        "MA_10": 330.49199829101565,
-        "MA_20": 319.76100006103513,
-        "MA_21_EMA": 318.0794153446479,
-        "MA_50": 284.82008850097657,
-        "MA_100": 237.84093154907225,
-        "RSI": 64.03046885435899,
-        "Williams_R": -24.681626574170078,
-        "MACD": 18.143679879852527,
-        "MACD_Signal": 16.81081560575192,
-        "BB_Upper": 354.077817329678,
-        "BB_Lower": 285.44418279239227,
-        "Volume_Ratio": 0.19523044046594584
+        "MA_10": 334.6404998779297,
+        "MA_20": 322.95875091552733,
+        "MA_21_EMA": 322.27589212623485,
+        "MA_50": 287.0018017578125,
+        "MA_100": 239.86306640625,
+        "RSI": 70.22121979313604,
+        "Williams_R": -1.9533383619007985,
+        "MACD": 19.551882578204243,
+        "MACD_Signal": 17.31400810361601,
+        "BB_Upper": 361.67150698113676,
+        "BB_Lower": 284.2459948499179,
+        "Volume_Ratio": 0.5818877684110316
       },
       "father_rules": {
         "below_ma10": false,
@@ -141,101 +141,99 @@
         "ma_alignment_bullish": true,
         "abnormal_volume_up": false,
         "abnormal_volume_down": false,
-        "volume_ratio": 0.19523044046594584,
-        "intraday_momentum_up": false,
-        "price_change_pct": 1.0440833184340192
-      },
-      "death_cross": false,
-      "golden_cross": false,
-      "reasons": [
-        "\u2705 Bullish MA alignment (10 > 21 > 50)"
-      ],
-      "earnings_date": "2026-07-29",
-      "earnings_soon": false,
-      "pre_earnings_volatility": 3.39,
-      "pre_earnings_pattern": "Average"
-    },
-    "CRDO": {
-      "name": "Credo Technology",
-      "category": "CHIP STOCKS",
-      "current_price": 185.5449981689453,
-      "signal": "BUY",
-      "signal_strength": 55,
-      "indicators": {
-        "MA_10": 182.6334991455078,
-        "MA_20": 176.80524978637695,
-        "MA_21_EMA": 170.55976315812134,
-        "MA_50": 134.41309997558594,
-        "MA_100": 134.36245056152345,
-        "RSI": 60.586287762221254,
-        "Williams_R": -44.65048697445618,
-        "MACD": 16.3698128498514,
-        "MACD_Signal": 17.109224296012712,
-        "BB_Upper": 207.68139872492006,
-        "BB_Lower": 145.92910084783384,
-        "Volume_Ratio": 0.16276589830486035
-      },
-      "father_rules": {
-        "below_ma10": false,
-        "days_below_ma10": 0,
-        "below_ma21_ema": false,
-        "below_ma50": false,
-        "ma_alignment_bullish": true,
-        "abnormal_volume_up": false,
-        "abnormal_volume_down": false,
-        "volume_ratio": 0.16276589830486035,
-        "intraday_momentum_up": false,
-        "price_change_pct": -1.4578550188889206
-      },
-      "death_cross": false,
-      "golden_cross": true,
-      "reasons": [
-        "\u2705 GOLDEN CROSS (50-day crossed above 100-day)",
-        "\u2705 Bullish MA alignment (10 > 21 > 50)"
-      ],
-      "earnings_date": "2026-06-01",
-      "earnings_soon": false,
-      "pre_earnings_volatility": 4.97,
-      "pre_earnings_pattern": "Average"
-    },
-    "ALAB": {
-      "name": "Astera Labs",
-      "category": "CHIP STOCKS",
-      "current_price": 190.39010620117188,
-      "signal": "SELL",
-      "signal_strength": 45,
-      "indicators": {
-        "MA_10": 199.1110107421875,
-        "MA_20": 190.8832550048828,
-        "MA_21_EMA": 185.1586679856173,
-        "MA_50": 148.2688023376465,
-        "MA_100": 152.9545012664795,
-        "RSI": 55.62146945838443,
-        "Williams_R": -79.21036135757899,
-        "MACD": 15.805305816502795,
-        "MACD_Signal": 17.418211337568355,
-        "BB_Upper": 221.15395312196583,
-        "BB_Lower": 160.6125568877998,
-        "Volume_Ratio": 0.22417519862491012
-      },
-      "father_rules": {
-        "below_ma10": true,
-        "days_below_ma10": 2,
-        "below_ma21_ema": false,
-        "below_ma50": false,
-        "ma_alignment_bullish": true,
-        "abnormal_volume_up": false,
-        "abnormal_volume_down": false,
-        "volume_ratio": 0.22417519862491012,
-        "intraday_momentum_up": false,
-        "price_change_pct": -2.6884169994380036
+        "volume_ratio": 0.5818877684110316,
+        "intraday_momentum_up": true,
+        "price_change_pct": 8.0992450990504
       },
       "death_cross": false,
       "golden_cross": false,
       "reasons": [
         "\u2705 Bullish MA alignment (10 > 21 > 50)",
-        "\u26a0\ufe0f Price below 10-day MA (DO NOT BUY)",
-        "\ud83d\udd34 Below 10-day MA for 2 days (Consider selling 25%)"
+        "RSI overbought at 70.2"
+      ],
+      "earnings_date": "2026-07-29",
+      "earnings_soon": false,
+      "pre_earnings_volatility": 3.4,
+      "pre_earnings_pattern": "Average"
+    },
+    "CRDO": {
+      "name": "Credo Technology",
+      "category": "CHIP STOCKS",
+      "current_price": 205.58999633789062,
+      "signal": "BUY",
+      "signal_strength": 60,
+      "indicators": {
+        "MA_10": 185.4384994506836,
+        "MA_20": 180.51474990844727,
+        "MA_21_EMA": 173.98887256238126,
+        "MA_50": 136.33870010375978,
+        "MA_100": 135.0277505493164,
+        "RSI": 67.81220924932961,
+        "Williams_R": -4.4954309367276375,
+        "MACD": 17.260626447383515,
+        "MACD_Signal": 17.178346909696106,
+        "BB_Upper": 207.0342736951136,
+        "BB_Lower": 153.99522612178095,
+        "Volume_Ratio": 0.540008443451632
+      },
+      "father_rules": {
+        "below_ma10": false,
+        "days_below_ma10": 0,
+        "below_ma21_ema": false,
+        "below_ma50": false,
+        "ma_alignment_bullish": true,
+        "abnormal_volume_up": false,
+        "abnormal_volume_down": false,
+        "volume_ratio": 0.540008443451632,
+        "intraday_momentum_up": true,
+        "price_change_pct": 9.063415300670297
+      },
+      "death_cross": false,
+      "golden_cross": false,
+      "reasons": [
+        "\u2705 Bullish MA alignment (10 > 21 > 50)"
+      ],
+      "earnings_date": "2026-06-01",
+      "earnings_soon": false,
+      "pre_earnings_volatility": 4.99,
+      "pre_earnings_pattern": "Average"
+    },
+    "ALAB": {
+      "name": "Astera Labs",
+      "category": "CHIP STOCKS",
+      "current_price": 206.17999267578125,
+      "signal": "BUY",
+      "signal_strength": 55,
+      "indicators": {
+        "MA_10": 201.00499877929687,
+        "MA_20": 193.32249908447267,
+        "MA_21_EMA": 187.84650207174877,
+        "MA_50": 150.20379989624024,
+        "MA_100": 153.67370002746583,
+        "RSI": 62.36958298388137,
+        "Williams_R": -48.95574220453969,
+        "MACD": 16.05350220276759,
+        "MACD_Signal": 17.265809088084282,
+        "BB_Upper": 222.21916308717468,
+        "BB_Lower": 164.42583508177066,
+        "Volume_Ratio": 0.4215655582740359
+      },
+      "father_rules": {
+        "below_ma10": false,
+        "days_below_ma10": 0,
+        "below_ma21_ema": false,
+        "below_ma50": false,
+        "ma_alignment_bullish": true,
+        "abnormal_volume_up": false,
+        "abnormal_volume_down": false,
+        "volume_ratio": 0.4215655582740359,
+        "intraday_momentum_up": true,
+        "price_change_pct": 3.198358078173058
+      },
+      "death_cross": false,
+      "golden_cross": false,
+      "reasons": [
+        "\u2705 Bullish MA alignment (10 > 21 > 50)"
       ],
       "earnings_date": "2026-08-04",
       "earnings_soon": false,
@@ -245,22 +243,22 @@
     "AVGO": {
       "name": "Broadcom",
       "category": "CHIP STOCKS",
-      "current_price": 422.9200134277344,
+      "current_price": 430.5945129394531,
       "signal": "BUY",
       "signal_strength": 55,
       "indicators": {
-        "MA_10": 416.69700012207034,
-        "MA_20": 409.81900177001955,
-        "MA_21_EMA": 401.9175279697842,
-        "MA_50": 358.5031298828125,
-        "MA_100": 346.88598388671875,
-        "RSI": 63.74009611117275,
-        "Williams_R": -34.237959321208415,
-        "MACD": 18.724836964908945,
-        "MACD_Signal": 20.4864606588339,
-        "BB_Upper": 438.13780305063597,
-        "BB_Lower": 381.50020048940314,
-        "Volume_Ratio": 0.27038482051056206
+        "MA_10": 418.6444488525391,
+        "MA_20": 412.7152267456055,
+        "MA_21_EMA": 405.10960227814405,
+        "MA_50": 360.8789984130859,
+        "MA_100": 347.87821807861326,
+        "RSI": 66.07356875038121,
+        "Williams_R": -16.46637215276236,
+        "MACD": 19.08558929710904,
+        "MACD_Signal": 20.2972353593546,
+        "BB_Upper": 439.487697685918,
+        "BB_Lower": 385.94275580529296,
+        "Volume_Ratio": 0.33140845991615725
       },
       "father_rules": {
         "below_ma10": false,
@@ -270,9 +268,9 @@
         "ma_alignment_bullish": true,
         "abnormal_volume_up": false,
         "abnormal_volume_down": false,
-        "volume_ratio": 0.27038482051056206,
+        "volume_ratio": 0.33140845991615725,
         "intraday_momentum_up": true,
-        "price_change_pct": 2.5111537547140017
+        "price_change_pct": 0.13825882312863413
       },
       "death_cross": false,
       "golden_cross": false,
@@ -287,22 +285,22 @@
     "BRK-B": {
       "name": "Berkshire Hathaway",
       "category": "HIGH FLYERS",
-      "current_price": 477.31500244140625,
+      "current_price": 478.3349914550781,
       "signal": "HOLD",
       "signal_strength": 50,
       "indicators": {
-        "MA_10": 472.92249755859376,
-        "MA_20": 472.82974700927736,
-        "MA_21_EMA": 473.8899444693557,
-        "MA_50": 479.9345001220703,
-        "MA_100": 487.723349609375,
-        "RSI": 52.9635167012753,
-        "Williams_R": -16.451982463690367,
-        "MACD": -1.898005860262856,
-        "MACD_Signal": -2.7275039301510584,
-        "BB_Upper": 481.0377052907909,
-        "BB_Lower": 464.6217887277638,
-        "Volume_Ratio": 0.20495268729058994
+        "MA_10": 473.3374969482422,
+        "MA_20": 472.6682464599609,
+        "MA_21_EMA": 474.1804039492676,
+        "MA_50": 479.37469970703125,
+        "MA_100": 487.42914947509763,
+        "RSI": 54.23261035885547,
+        "Williams_R": -12.858049535015411,
+        "MACD": -1.4041480887279931,
+        "MACD_Signal": -2.4803908166501576,
+        "BB_Upper": 480.4166470604578,
+        "BB_Lower": 464.91984585946403,
+        "Volume_Ratio": 0.31630503669037424
       },
       "father_rules": {
         "below_ma10": false,
@@ -312,9 +310,9 @@
         "ma_alignment_bullish": false,
         "abnormal_volume_up": false,
         "abnormal_volume_down": false,
-        "volume_ratio": 0.20495268729058994,
+        "volume_ratio": 0.31630503669037424,
         "intraday_momentum_up": true,
-        "price_change_pct": 0.4704504362026407
+        "price_change_pct": 0.5032123800030375
       },
       "death_cross": false,
       "golden_cross": false,
@@ -329,22 +327,22 @@
     "GLD": {
       "name": "SPDR Gold Trust",
       "category": "HIGH FLYERS",
-      "current_price": 433.19000244140625,
-      "signal": "HOLD",
-      "signal_strength": 50,
+      "current_price": 434.4700012207031,
+      "signal": "SELL",
+      "signal_strength": 60,
       "indicators": {
-        "MA_10": 424.4859985351562,
-        "MA_20": 431.14949798583984,
-        "MA_21_EMA": 429.4768987173094,
-        "MA_50": 439.1165997314453,
-        "MA_100": 438.10650115966797,
-        "RSI": 51.68851867499492,
-        "Williams_R": -26.177223726538976,
-        "MACD": -2.8300513409402015,
-        "MACD_Signal": -3.679583518215436,
-        "BB_Upper": 449.36707917191313,
-        "BB_Lower": 412.93191679976655,
-        "Volume_Ratio": 0.39308043211636085
+        "MA_10": 425.0019958496094,
+        "MA_20": 431.13399810791014,
+        "MA_21_EMA": 429.97876087844804,
+        "MA_50": 438.14259948730466,
+        "MA_100": 438.49900115966796,
+        "RSI": 52.53245569173285,
+        "Williams_R": -12.220424262344821,
+        "MACD": -2.051408715034654,
+        "MACD_Signal": -3.346681594355314,
+        "BB_Upper": 449.32842931513363,
+        "BB_Lower": 412.93956690068666,
+        "Volume_Ratio": 0.5030589116522851
       },
       "father_rules": {
         "below_ma10": false,
@@ -354,13 +352,14 @@
         "ma_alignment_bullish": false,
         "abnormal_volume_up": false,
         "abnormal_volume_down": false,
-        "volume_ratio": 0.39308043211636085,
-        "intraday_momentum_up": false,
-        "price_change_pct": 0.3497984134648302
+        "volume_ratio": 0.5030589116522851,
+        "intraday_momentum_up": true,
+        "price_change_pct": 0.16137866260019784
       },
-      "death_cross": false,
+      "death_cross": true,
       "golden_cross": false,
       "reasons": [
+        "\ud83d\udd34 DEATH CROSS (50-day crossed below 100-day)",
         "\ud83d\udd34 Price BELOW 50-day MA (Consider selling position)"
       ],
       "earnings_date": null,
@@ -371,22 +370,22 @@
     "AAPL": {
       "name": "Apple",
       "category": "HIGH FLYERS",
-      "current_price": 294.30999755859375,
+      "current_price": 292.9649963378906,
       "signal": "BUY",
       "signal_strength": 60,
       "indicators": {
-        "MA_10": 279.025,
-        "MA_20": 273.26100006103513,
-        "MA_21_EMA": 274.56416151794934,
-        "MA_50": 262.8223992919922,
-        "MA_100": 264.1081967163086,
-        "RSI": 73.47013622986333,
-        "Williams_R": -1.1494134287721673,
-        "MACD": 7.378987763524663,
-        "MACD_Signal": 5.32638536528963,
-        "BB_Upper": 292.13639028753454,
-        "BB_Lower": 254.38560983453573,
-        "Volume_Ratio": 0.2982165723667406
+        "MA_10": 281.4615020751953,
+        "MA_20": 274.8997497558594,
+        "MA_21_EMA": 276.15519014602216,
+        "MA_50": 263.37829956054685,
+        "MA_100": 264.28940948486326,
+        "RSI": 72.38271897031647,
+        "Williams_R": -6.045851398216844,
+        "MACD": 7.810977484838816,
+        "MACD_Signal": 5.810138403939865,
+        "BB_Upper": 294.30382554744637,
+        "BB_Lower": 255.49567396427238,
+        "Volume_Ratio": 0.3195159741035704
       },
       "father_rules": {
         "below_ma10": false,
@@ -396,40 +395,40 @@
         "ma_alignment_bullish": true,
         "abnormal_volume_up": false,
         "abnormal_volume_down": false,
-        "volume_ratio": 0.2982165723667406,
+        "volume_ratio": 0.3195159741035704,
         "intraday_momentum_up": true,
-        "price_change_pct": 2.390062294334938
+        "price_change_pct": -0.12103197104305075
       },
       "death_cross": false,
       "golden_cross": false,
       "reasons": [
         "\u2705 Bullish MA alignment (10 > 21 > 50)",
-        "RSI overbought at 73.5"
+        "RSI overbought at 72.4"
       ],
       "earnings_date": "2026-07-30",
       "earnings_soon": false,
-      "pre_earnings_volatility": 1.35,
+      "pre_earnings_volatility": 1.34,
       "pre_earnings_pattern": "Average"
     },
     "AMZN": {
       "name": "Amazon",
       "category": "HIGH FLYERS",
-      "current_price": 272.2900085449219,
+      "current_price": 272.2950134277344,
       "signal": "BUY",
-      "signal_strength": 60,
+      "signal_strength": 55,
       "indicators": {
-        "MA_10": 268.1230010986328,
-        "MA_20": 259.57600021362305,
-        "MA_21_EMA": 257.2994263917489,
-        "MA_50": 231.2318002319336,
-        "MA_100": 229.03679992675782,
-        "RSI": 74.90312602865251,
-        "Williams_R": -21.28306460384629,
-        "MACD": 12.501702343403622,
-        "MACD_Signal": 12.364523114508888,
-        "BB_Upper": 280.5189710930015,
-        "BB_Lower": 238.6330293342446,
-        "Volume_Ratio": 0.1852921906232308
+        "MA_10": 269.2795013427734,
+        "MA_20": 261.2157501220703,
+        "MA_21_EMA": 258.6948968274823,
+        "MA_50": 232.48550018310547,
+        "MA_100": 229.53824996948242,
+        "RSI": 74.4126239186834,
+        "Williams_R": -22.19264994343491,
+        "MACD": 12.121805334799149,
+        "MACD_Signal": 12.320893373828763,
+        "BB_Upper": 280.7574239339819,
+        "BB_Lower": 241.67407631015868,
+        "Volume_Ratio": 0.2970468681047128
       },
       "father_rules": {
         "below_ma10": false,
@@ -439,40 +438,40 @@
         "ma_alignment_bullish": true,
         "abnormal_volume_up": false,
         "abnormal_volume_down": false,
-        "volume_ratio": 0.1852921906232308,
+        "volume_ratio": 0.2970468681047128,
         "intraday_momentum_up": true,
-        "price_change_pct": 0.4130232185447724
+        "price_change_pct": -0.1411835332211675
       },
       "death_cross": false,
       "golden_cross": false,
       "reasons": [
         "\u2705 Bullish MA alignment (10 > 21 > 50)",
-        "RSI overbought at 74.9"
+        "RSI overbought at 74.4"
       ],
       "earnings_date": "2026-07-30",
       "earnings_soon": false,
-      "pre_earnings_volatility": 1.77,
+      "pre_earnings_volatility": 1.76,
       "pre_earnings_pattern": "Average"
     },
     "GOOGL": {
       "name": "Google/Alphabet",
       "category": "HIGH FLYERS",
-      "current_price": 400.44000244140625,
+      "current_price": 394.20001220703125,
       "signal": "BUY",
       "signal_strength": 60,
       "indicators": {
-        "MA_10": 378.8699981689453,
-        "MA_20": 357.5029998779297,
-        "MA_21_EMA": 360.5690683596932,
-        "MA_50": 323.69613159179687,
-        "MA_100": 321.6919430541992,
-        "RSI": 83.95479617265183,
-        "Williams_R": -1.3281816933728205,
-        "MACD": 22.158223986180758,
-        "MACD_Signal": 17.782902969025173,
-        "BB_Upper": 410.58304085234084,
-        "BB_Lower": 304.4229589035186,
-        "Volume_Ratio": 0.22677680061887232
+        "MA_10": 383.2919982910156,
+        "MA_20": 361.1654998779297,
+        "MA_21_EMA": 363.65618664884755,
+        "MA_50": 325.35651733398436,
+        "MA_100": 322.5575112915039,
+        "RSI": 76.79249173954365,
+        "Williams_R": -11.671389136872484,
+        "MACD": 21.959747659029574,
+        "MACD_Signal": 18.62275653208855,
+        "BB_Upper": 413.84643262581255,
+        "BB_Lower": 308.4845671300468,
+        "Volume_Ratio": 0.36977527201130644
       },
       "father_rules": {
         "below_ma10": false,
@@ -482,15 +481,15 @@
         "ma_alignment_bullish": true,
         "abnormal_volume_up": false,
         "abnormal_volume_down": false,
-        "volume_ratio": 0.22677680061887232,
+        "volume_ratio": 0.36977527201130644,
         "intraday_momentum_up": true,
-        "price_change_pct": 0.6155964388924628
+        "price_change_pct": -1.6467005456463957
       },
       "death_cross": false,
       "golden_cross": false,
       "reasons": [
         "\u2705 Bullish MA alignment (10 > 21 > 50)",
-        "RSI overbought at 84.0"
+        "RSI overbought at 76.8"
       ],
       "earnings_date": "2026-07-23",
       "earnings_soon": false,
@@ -500,67 +499,67 @@
     "META": {
       "name": "Meta/Facebook",
       "category": "HIGH FLYERS",
-      "current_price": 611.7999877929688,
+      "current_price": 603.6500244140625,
       "signal": "SELL",
       "signal_strength": 55,
       "indicators": {
-        "MA_10": 629.6599975585938,
-        "MA_20": 648.9635009765625,
-        "MA_21_EMA": 631.3040999388793,
-        "MA_50": 626.4714721679687,
-        "MA_100": 641.2965570068359,
-        "RSI": 42.8113626210138,
-        "Williams_R": -83.76776274397784,
-        "MACD": -4.146524701162662,
-        "MACD_Signal": 2.753167856716114,
-        "BB_Upper": 709.6408586507483,
-        "BB_Lower": 588.2861433023767,
-        "Volume_Ratio": 0.20067596308205365
+        "MA_10": 621.9460021972657,
+        "MA_20": 647.311001586914,
+        "MA_21_EMA": 628.6107212216734,
+        "MA_50": 625.5485632324219,
+        "MA_100": 640.8417962646485,
+        "RSI": 40.461255328435584,
+        "Williams_R": -93.42411466506606,
+        "MACD": -5.868531167527976,
+        "MACD_Signal": 1.0015569609677877,
+        "BB_Upper": 711.2923169673988,
+        "BB_Lower": 583.3296862064292,
+        "Volume_Ratio": 0.41599904845234564
       },
       "father_rules": {
         "below_ma10": true,
-        "days_below_ma10": 9,
+        "days_below_ma10": 10,
         "below_ma21_ema": true,
         "below_ma50": true,
         "ma_alignment_bullish": false,
         "abnormal_volume_up": false,
         "abnormal_volume_down": false,
-        "volume_ratio": 0.20067596308205365,
+        "volume_ratio": 0.41599904845234564,
         "intraday_momentum_up": false,
-        "price_change_pct": -0.812245227129138
+        "price_change_pct": -0.9809196432021938
       },
       "death_cross": false,
       "golden_cross": false,
       "reasons": [
         "\u26a0\ufe0f Price below 10-day MA (DO NOT BUY)",
-        "\ud83d\udd34 Below 10-day MA for 9 days (Consider selling 25%)",
+        "\ud83d\udd34 Below 10-day MA for 10 days (Consider selling 25%)",
         "\u26a0\ufe0f Price below 21-day EMA (Consider selling another 25%)",
         "\ud83d\udd34 Price BELOW 50-day MA (Consider selling position)"
       ],
       "earnings_date": "2026-07-29",
       "earnings_soon": false,
-      "pre_earnings_volatility": 1.98,
+      "pre_earnings_volatility": 1.97,
       "pre_earnings_pattern": "Higher than average"
     },
     "TSLA": {
       "name": "Tesla",
       "category": "HIGH FLYERS",
-      "current_price": 425.92498779296875,
+      "current_price": 437.4800109863281,
       "signal": "BUY",
       "signal_strength": 60,
       "indicators": {
-        "MA_10": 391.8265014648438,
-        "MA_20": 386.6402526855469,
-        "MA_21_EMA": 388.6893175321474,
-        "MA_50": 383.1409008789062,
-        "MA_100": 410.36805053710935,
-        "RSI": 69.20245939304803,
-        "Williams_R": -5.962353473477112,
-        "MACD": 7.705973934549888,
-        "MACD_Signal": 2.7948912169855387,
-        "BB_Upper": 419.0411199521619,
-        "BB_Lower": 354.2393854189319,
-        "Volume_Ratio": 0.42038132882962276
+        "MA_10": 397.9500030517578,
+        "MA_20": 391.0145034790039,
+        "MA_21_EMA": 393.32520852475506,
+        "MA_50": 383.88880126953126,
+        "MA_100": 410.01400085449217,
+        "RSI": 72.32516355354127,
+        "Williams_R": -5.371612324965209,
+        "MACD": 10.672454612072329,
+        "MACD_Signal": 4.4018666798104515,
+        "BB_Upper": 427.18373994229484,
+        "BB_Lower": 354.845267015713,
+        "Volume_Ratio": 0.5755098645341474
       },
       "father_rules": {
         "below_ma10": false,
@@ -570,82 +569,40 @@
         "ma_alignment_bullish": true,
         "abnormal_volume_up": false,
         "abnormal_volume_down": false,
-        "volume_ratio": 0.42038132882962276,
+        "volume_ratio": 0.5755098645341474,
         "intraday_momentum_up": true,
-        "price_change_pct": 3.4325697454373527
-      },
-      "death_cross": false,
-      "golden_cross": false,
-      "reasons": [
-        "\u2705 Bullish MA alignment (10 > 21 > 50)"
-      ],
-      "earnings_date": "2026-07-22",
-      "earnings_soon": false,
-      "pre_earnings_volatility": 2.87,
-      "pre_earnings_pattern": "Average"
-    },
-    "MSFT": {
-      "name": "Microsoft",
-      "category": "HIGH FLYERS",
-      "current_price": 415.2099914550781,
-      "signal": "BUY",
-      "signal_strength": 65,
-      "indicators": {
-        "MA_10": 417.5689971923828,
-        "MA_20": 416.1479995727539,
-        "MA_21_EMA": 411.2746805948053,
-        "MA_50": 398.148798828125,
-        "MA_100": 422.11704345703123,
-        "RSI": 53.95302382957303,
-        "Williams_R": -51.807283516746615,
-        "MACD": 5.898522691481901,
-        "MACD_Signal": 6.979109197271806,
-        "BB_Upper": 439.05316915081215,
-        "BB_Lower": 393.2428299946957,
-        "Volume_Ratio": 0.2494337240320519
-      },
-      "father_rules": {
-        "below_ma10": true,
-        "days_below_ma10": 1,
-        "below_ma21_ema": false,
-        "below_ma50": false,
-        "ma_alignment_bullish": true,
-        "abnormal_volume_up": false,
-        "abnormal_volume_down": false,
-        "volume_ratio": 0.2494337240320519,
-        "intraday_momentum_up": false,
-        "price_change_pct": -1.3213864352890181
+        "price_change_pct": 2.1314356840714366
       },
       "death_cross": false,
       "golden_cross": false,
       "reasons": [
         "\u2705 Bullish MA alignment (10 > 21 > 50)",
-        "\u26a0\ufe0f Price below 10-day MA (DO NOT BUY)"
+        "RSI overbought at 72.3"
       ],
-      "earnings_date": "2026-07-29",
+      "earnings_date": "2026-07-22",
       "earnings_soon": false,
-      "pre_earnings_volatility": 1.33,
-      "pre_earnings_pattern": "Higher than average"
+      "pre_earnings_volatility": 2.87,
+      "pre_earnings_pattern": "Lower than average"
     },
-    "CCJ": {
-      "name": "Cameco",
-      "category": "URANIUM STOCKS",
-      "current_price": 117.2699966430664,
+    "MSFT": {
+      "name": "Microsoft",
+      "category": "HIGH FLYERS",
+      "current_price": 410.2650146484375,
       "signal": "SELL",
       "signal_strength": 45,
       "indicators": {
-        "MA_10": 118.98099975585937,
-        "MA_20": 119.76549987792968,
-        "MA_21_EMA": 118.33486100995101,
-        "MA_50": 115.00339981079101,
-        "MA_100": 112.54579978942871,
-        "RSI": 49.449990995879446,
-        "Williams_R": -72.04137299092675,
-        "MACD": 1.1331871097024049,
-        "MACD_Signal": 1.6455667146119084,
-        "BB_Upper": 126.79902285659215,
-        "BB_Lower": 112.73197689926722,
-        "Volume_Ratio": 0.19279215543608996
+        "MA_10": 416.1044982910156,
+        "MA_20": 417.43825073242186,
+        "MA_21_EMA": 411.17547473036296,
+        "MA_50": 398.49749938964845,
+        "MA_100": 421.4814065551758,
+        "RSI": 50.707358410385126,
+        "Williams_R": -65.6626392701092,
+        "MACD": 5.054073231802704,
+        "MACD_Signal": 6.592710236379641,
+        "BB_Upper": 435.112032598709,
+        "BB_Lower": 399.76446886613473,
+        "Volume_Ratio": 0.37524082242313483
       },
       "father_rules": {
         "below_ma10": true,
@@ -655,9 +612,9 @@
         "ma_alignment_bullish": true,
         "abnormal_volume_up": false,
         "abnormal_volume_down": false,
-        "volume_ratio": 0.19279215543608996,
-        "intraday_momentum_up": false,
-        "price_change_pct": -1.213042247925178
+        "volume_ratio": 0.37524082242313483,
+        "intraday_momentum_up": true,
+        "price_change_pct": -1.1695366462363355
       },
       "death_cross": false,
       "golden_cross": false,
@@ -667,30 +624,158 @@
         "\ud83d\udd34 Below 10-day MA for 2 days (Consider selling 25%)",
         "\u26a0\ufe0f Price below 21-day EMA (Consider selling another 25%)"
       ],
+      "earnings_date": "2026-07-29",
+      "earnings_soon": false,
+      "pre_earnings_volatility": 1.33,
+      "pre_earnings_pattern": "Higher than average"
+    },
+    "CCJ": {
+      "name": "Cameco",
+      "category": "URANIUM STOCKS",
+      "current_price": 119.5999984741211,
+      "signal": "BUY",
+      "signal_strength": 65,
+      "indicators": {
+        "MA_10": 118.57799987792968,
+        "MA_20": 119.8845001220703,
+        "MA_21_EMA": 118.4068859304071,
+        "MA_50": 115.01699981689453,
+        "MA_100": 112.83879981994629,
+        "RSI": 51.79714770292641,
+        "Williams_R": -60.00002365702984,
+        "MACD": 1.063962232745908,
+        "MACD_Signal": 1.5227651844078398,
+        "BB_Upper": 126.81569855331782,
+        "BB_Lower": 112.9533016908228,
+        "Volume_Ratio": 0.4762762117130504
+      },
+      "father_rules": {
+        "below_ma10": false,
+        "days_below_ma10": 0,
+        "below_ma21_ema": false,
+        "below_ma50": false,
+        "ma_alignment_bullish": true,
+        "abnormal_volume_up": false,
+        "abnormal_volume_down": false,
+        "volume_ratio": 0.4762762117130504,
+        "intraday_momentum_up": true,
+        "price_change_pct": 2.4411121834013727
+      },
+      "death_cross": false,
+      "golden_cross": false,
+      "reasons": [
+        "\u2705 Bullish MA alignment (10 > 21 > 50)"
+      ],
       "earnings_date": "2026-07-31",
       "earnings_soon": false,
-      "pre_earnings_volatility": 3.26,
+      "pre_earnings_volatility": 3.27,
       "pre_earnings_pattern": "Higher than average"
     },
     "OKLO": {
       "name": "Oklo Inc",
       "category": "URANIUM STOCKS",
-      "current_price": 70.91000366210938,
+      "current_price": 77.54139709472656,
       "signal": "BUY",
       "signal_strength": 70,
       "indicators": {
-        "MA_10": 71.2240005493164,
-        "MA_20": 68.48700008392333,
-        "MA_21_EMA": 67.64780879891136,
-        "MA_50": 60.79039993286133,
-        "MA_100": 70.38869991302491,
-        "RSI": 54.183315833103,
-        "Williams_R": -54.9273703754707,
-        "MACD": 3.6852509107423117,
-        "MACD_Signal": 3.525084231286202,
-        "BB_Upper": 80.67877762452665,
-        "BB_Lower": 56.295222543320016,
-        "Volume_Ratio": 0.25655548855278126
+        "MA_10": 71.54514007568359,
+        "MA_20": 69.74706993103027,
+        "MA_21_EMA": 68.67940341447222,
+        "MA_50": 61.114227828979494,
+        "MA_100": 70.35681385040283,
+        "RSI": 59.45111144830341,
+        "Williams_R": -21.631710766722914,
+        "MACD": 4.089201720357025,
+        "MACD_Signal": 3.658994275432344,
+        "BB_Upper": 80.5560551866032,
+        "BB_Lower": 58.93808467545733,
+        "Volume_Ratio": 0.540433580550935
+      },
+      "father_rules": {
+        "below_ma10": false,
+        "days_below_ma10": 0,
+        "below_ma21_ema": false,
+        "below_ma50": false,
+        "ma_alignment_bullish": true,
+        "abnormal_volume_up": false,
+        "abnormal_volume_down": false,
+        "volume_ratio": 0.540433580550935,
+        "intraday_momentum_up": true,
+        "price_change_pct": 6.938897821356016
+      },
+      "death_cross": false,
+      "golden_cross": false,
+      "reasons": [
+        "\u2705 Bullish MA alignment (10 > 21 > 50)"
+      ],
+      "earnings_date": "2026-05-12",
+      "earnings_soon": true,
+      "pre_earnings_volatility": 6.44,
+      "pre_earnings_pattern": "Higher than average"
+    },
+    "CNI": {
+      "name": "Canadian National Railway",
+      "category": "RAILROADS",
+      "current_price": 110.43499755859375,
+      "signal": "BUY",
+      "signal_strength": 65,
+      "indicators": {
+        "MA_10": 111.15349884033203,
+        "MA_20": 111.35324935913086,
+        "MA_21_EMA": 110.46639798438281,
+        "MA_50": 107.55636764526368,
+        "MA_100": 104.23758407592773,
+        "RSI": 51.194604130720634,
+        "Williams_R": -60.965950370805785,
+        "MACD": 1.0296292990448848,
+        "MACD_Signal": 1.4142197186703294,
+        "BB_Upper": 115.37971942785985,
+        "BB_Lower": 107.32677929040186,
+        "Volume_Ratio": 0.27879049903227016
+      },
+      "father_rules": {
+        "below_ma10": true,
+        "days_below_ma10": 1,
+        "below_ma21_ema": true,
+        "below_ma50": false,
+        "ma_alignment_bullish": true,
+        "abnormal_volume_up": false,
+        "abnormal_volume_down": false,
+        "volume_ratio": 0.27879049903227016,
+        "intraday_momentum_up": false,
+        "price_change_pct": -1.0793638818009654
+      },
+      "death_cross": false,
+      "golden_cross": false,
+      "reasons": [
+        "\u2705 Bullish MA alignment (10 > 21 > 50)",
+        "\u26a0\ufe0f Price below 10-day MA (DO NOT BUY)",
+        "\u26a0\ufe0f Price below 21-day EMA (Consider selling another 25%)"
+      ],
+      "earnings_date": "2026-07-24",
+      "earnings_soon": false,
+      "pre_earnings_volatility": 1.3,
+      "pre_earnings_pattern": "Higher than average"
+    },
+    "CP": {
+      "name": "Canadian Pacific",
+      "category": "RAILROADS",
+      "current_price": 85.06999969482422,
+      "signal": "BUY",
+      "signal_strength": 65,
+      "indicators": {
+        "MA_10": 85.31500015258788,
+        "MA_20": 84.24400024414062,
+        "MA_21_EMA": 84.18746130675825,
+        "MA_50": 82.40438903808594,
+        "MA_100": 79.52356880187989,
+        "RSI": 54.15385476399708,
+        "Williams_R": -46.522435368309836,
+        "MACD": 1.0955784661448007,
+        "MACD_Signal": 1.1460638577154447,
+        "BB_Upper": 88.83728794434626,
+        "BB_Lower": 79.65071254393499,
+        "Volume_Ratio": 0.2927330383198463
       },
       "father_rules": {
         "below_ma10": true,
@@ -700,103 +785,15 @@
         "ma_alignment_bullish": true,
         "abnormal_volume_up": false,
         "abnormal_volume_down": false,
-        "volume_ratio": 0.25655548855278126,
+        "volume_ratio": 0.2927330383198463,
         "intraday_momentum_up": false,
-        "price_change_pct": -1.2807993115594885
+        "price_change_pct": -1.1273840195044404
       },
       "death_cross": false,
       "golden_cross": false,
       "reasons": [
         "\u2705 Bullish MA alignment (10 > 21 > 50)",
         "\u26a0\ufe0f Price below 10-day MA (DO NOT BUY)"
-      ],
-      "earnings_date": "2026-05-12",
-      "earnings_soon": true,
-      "pre_earnings_volatility": 6.43,
-      "pre_earnings_pattern": "Higher than average"
-    },
-    "CNI": {
-      "name": "Canadian National Railway",
-      "category": "RAILROADS",
-      "current_price": 110.75,
-      "signal": "SELL",
-      "signal_strength": 45,
-      "indicators": {
-        "MA_10": 111.51599884033203,
-        "MA_20": 111.33449935913086,
-        "MA_21_EMA": 110.38861731408471,
-        "MA_50": 107.55965957641601,
-        "MA_100": 104.10169403076172,
-        "RSI": 52.260955147941424,
-        "Williams_R": -57.38637841436961,
-        "MACD": 1.1057399010732354,
-        "MACD_Signal": 1.4963319624537177,
-        "BB_Upper": 115.35034350229148,
-        "BB_Lower": 107.31865521597024,
-        "Volume_Ratio": 0.0969143191533639
-      },
-      "father_rules": {
-        "below_ma10": true,
-        "days_below_ma10": 6,
-        "below_ma21_ema": false,
-        "below_ma50": false,
-        "ma_alignment_bullish": true,
-        "abnormal_volume_up": false,
-        "abnormal_volume_down": false,
-        "volume_ratio": 0.0969143191533639,
-        "intraday_momentum_up": false,
-        "price_change_pct": -0.08119482214369311
-      },
-      "death_cross": false,
-      "golden_cross": false,
-      "reasons": [
-        "\u2705 Bullish MA alignment (10 > 21 > 50)",
-        "\u26a0\ufe0f Price below 10-day MA (DO NOT BUY)",
-        "\ud83d\udd34 Below 10-day MA for 6 days (Consider selling 25%)"
-      ],
-      "earnings_date": "2026-07-24",
-      "earnings_soon": false,
-      "pre_earnings_volatility": 1.29,
-      "pre_earnings_pattern": "Higher than average"
-    },
-    "CP": {
-      "name": "Canadian Pacific",
-      "category": "RAILROADS",
-      "current_price": 85.44499969482422,
-      "signal": "SELL",
-      "signal_strength": 45,
-      "indicators": {
-        "MA_10": 85.48450012207032,
-        "MA_20": 84.03225021362304,
-        "MA_21_EMA": 84.04511313220245,
-        "MA_50": 82.43923385620117,
-        "MA_100": 79.40956596374512,
-        "RSI": 55.92062648323739,
-        "Williams_R": -40.72645500898547,
-        "MACD": 1.1212924892315073,
-        "MACD_Signal": 1.1492388914919314,
-        "BB_Upper": 88.72879377658924,
-        "BB_Lower": 79.33570665065685,
-        "Volume_Ratio": 0.3785449006530702
-      },
-      "father_rules": {
-        "below_ma10": true,
-        "days_below_ma10": 2,
-        "below_ma21_ema": false,
-        "below_ma50": false,
-        "ma_alignment_bullish": true,
-        "abnormal_volume_up": false,
-        "abnormal_volume_down": false,
-        "volume_ratio": 0.3785449006530702,
-        "intraday_momentum_up": true,
-        "price_change_pct": 0.26402073562330486
-      },
-      "death_cross": false,
-      "golden_cross": false,
-      "reasons": [
-        "\u2705 Bullish MA alignment (10 > 21 > 50)",
-        "\u26a0\ufe0f Price below 10-day MA (DO NOT BUY)",
-        "\ud83d\udd34 Below 10-day MA for 2 days (Consider selling 25%)"
       ],
       "earnings_date": "2026-07-29",
       "earnings_soon": false,
@@ -833,8 +830,8 @@
     ]
   },
   "market_summary": {
-    "total_buy_signals": 11,
-    "total_sell_signals": 5,
-    "total_hold_signals": 2
+    "total_buy_signals": 14,
+    "total_sell_signals": 3,
+    "total_hold_signals": 1
   }
 }
